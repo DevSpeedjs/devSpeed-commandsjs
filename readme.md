@@ -29,7 +29,7 @@ there are 4 steps to seting setup
 > - in the `sayhello.js` write this code
 
 ```js
- const {Command} = require('CommandLibrary');
+ const {Command} = require('devspeed-commandsjs');
 
  const sayhello = new Command({
     trigger: "sayhello"
