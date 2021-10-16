@@ -24,7 +24,7 @@ export function initializeCommand(trigger: string, commands:[CommandLibraryInter
 
 
 export class Command {
-    constructor(commandObject: CommandLibrary){
+    constructor(commandObject: CommandLibraryInterface){
         return{
             ...commandObject
         }

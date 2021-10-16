@@ -6,7 +6,7 @@ interface CommandLibraryInterface {
 }
 export declare function initializeCommand(trigger: string, commands: [CommandLibraryInterface]): Error | undefined;
 export declare class Command {
-    constructor(commandObject: CommandLibrary);
+    constructor(commandObject: CommandLibraryInterface);
 }
 export declare class CommandLibrary {
     constructor(commands: [CommandLibraryInterface]);

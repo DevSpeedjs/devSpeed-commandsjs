@@ -1,6 +1,6 @@
 {
   "name": "devspeed-commandsjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "create commands easly",
   "types": "./lib/index.d.ts",
   "main": "index.js",
