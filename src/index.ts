@@ -8,7 +8,7 @@ interface CommandLibraryInterface {
 
 
 
-export function initializeCommand(trigger: string, commands:[CommandLibraryInterface] ){
+export function initializeCommand(trigger: string, commands:[CommandLibraryInterface], ...args: any[]){
     if(!trigger ||!commands){
         return new Error(`cannot
          execute command missing arg trigger and commands array`
@@ -16,7 +16,7 @@ export function initializeCommand(trigger: string, commands:[CommandLibraryInter
     }
     commands.forEach((data)=>{
        if(trigger === data.trigger){
-           data.execute()
+           return data.execute(args)
        }
     })
 }
@@ -46,14 +46,14 @@ export class Executer {
         this.commands = commands;
     }
   
-    initializeCommand(trigger: string){
+    initializeCommand(trigger: string, ...args: any[]){
        if(!trigger){
            throw new Error('trigger was not found')
        }
         const commands = this.commands
         commands?.forEach(function(data){
             if(data.trigger === trigger){
-                data.execute()
+               return data.execute(args)
             }
         })
     }

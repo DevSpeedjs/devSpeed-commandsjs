@@ -1,9 +1,9 @@
 {
   "name": "devspeed-commandsjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "create commands easly",
   "types": "./lib/index.d.ts",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
